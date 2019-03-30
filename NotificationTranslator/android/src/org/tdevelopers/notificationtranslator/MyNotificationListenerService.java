@@ -121,14 +121,12 @@ public class MyNotificationListenerService extends NotificationListenerService {
         Bundle extras = sbn.getNotification().extras;
         if( extras == null || pack.contains("org.tdevelopers.notificationtranslator" ) )
             return;
-        CharSequence cs = extras.getCharSequence(Notification.EXTRA_TITLE);
-        if( cs == null )
+        CharSequence csTitle = extras.getCharSequence(Notification.EXTRA_TITLE);
+        CharSequence csText = extras.getCharSequence(Notification.EXTRA_TEXT);
+        if( csTitle == null || csText == null )
             return;
-        cs = extras.getCharSequence(Notification.EXTRA_TEXT);
-        if( cs == null )
-            return;
-        title = mapString( cs.toString() );
-        text = mapString( cs.toString() );
+        title = mapString( csTitle.toString() );
+        text = mapString( csText.toString() );
 
 //        Log.i(TAG,"######## :" + title + "\n" + text );
 
