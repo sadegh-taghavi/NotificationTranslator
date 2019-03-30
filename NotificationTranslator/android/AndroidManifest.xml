@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <manifest package="org.tdevelopers.notificationtranslator" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.2.1" android:versionCode="3" android:installLocation="auto">
-    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="-- %%INSERT_APP_NAME%% --" android:icon="@drawable/icon">
-        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.tdevelopers.notificationtranslator.CustomMainActivity" android:label="-- %%INSERT_APP_NAME%% --" android:screenOrientation="portrait" android:launchMode="singleTop">
+    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="NT" android:icon="@drawable/icon">
+        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.tdevelopers.notificationtranslator.CustomMainActivity" android:label="NT" android:screenOrientation="portrait" android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -78,7 +78,7 @@
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
         android:theme="@android:style/Theme.Translucent"/> -->
 
-    <service android:name="org.tdevelopers.notificationtranslator.MyNotificationListenerService" android:label="NotificationTranslator" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+    <service android:name="org.tdevelopers.notificationtranslator.MyNotificationListenerService" android:label="NT" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
         <intent-filter>
             <action android:name="android.service.notification.NotificationListenerService"/>
         </intent-filter>
@@ -99,8 +99,8 @@
          Remove the comment if you do not require these default features. -->
     <!-- %%INSERT_FEATURES -->
 
-<uses-permission android:name="android.permission.VIBRATE"/>
-<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+
+
 <!--<uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>-->
 </manifest>
