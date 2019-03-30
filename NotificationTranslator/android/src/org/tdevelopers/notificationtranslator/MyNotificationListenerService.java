@@ -97,7 +97,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
 
     @Override
     public void onCreate() {
-        Log.i(TAG,"**********  onCreate");
+//        Log.i(TAG,"**********  onCreate");
         mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         mCurrentId = 0;
         mNotificationManager.cancelAll();
@@ -106,7 +106,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
 
     @Override
     public void onDestroy() {
-        Log.i(TAG,"**********  onDestroy");
+//        Log.i(TAG,"**********  onDestroy");
         super.onDestroy();
     }
 
@@ -114,7 +114,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
     public void onNotificationPosted(StatusBarNotification sbn) {
 
         String pack = sbn.getPackageName();
-        Log.i(TAG,"**********  onNotificationPosted " + pack );
+//        Log.i(TAG,"**********  onNotificationPosted " + pack );
         String ticker = "";
         String title = "";
         String text = "";
@@ -130,7 +130,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         title = mapString( cs.toString() );
         text = mapString( cs.toString() );
 
-        Log.i(TAG,"######## :" + title + "\n" + text );
+//        Log.i(TAG,"######## :" + title + "\n" + text );
 
 
         if (mBuilder == null)
@@ -201,7 +201,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
 
     @Override
     public void onNotificationRemoved(StatusBarNotification sbn) {
-        Log.i(TAG,"********** onNotificationRemoved");
+//        Log.i(TAG,"********** onNotificationRemoved");
 
     }
 }
