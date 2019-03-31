@@ -119,7 +119,8 @@ public class MyNotificationListenerService extends NotificationListenerService {
         String title = "";
         String text = "";
         Bundle extras = sbn.getNotification().extras;
-        if( extras == null || pack.contains("org.tdevelopers.notificationtranslator" ) )
+        if( extras == null || pack.contains("org.tdevelopers.notificationtranslator" ) ||
+        !sbn.isClearable() )
             return;
         CharSequence csTitle = extras.getCharSequence(Notification.EXTRA_TITLE);
         CharSequence csText = extras.getCharSequence(Notification.EXTRA_TEXT);
