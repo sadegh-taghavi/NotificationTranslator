@@ -92,6 +92,18 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("۸", "8");
         out = out.replace("۹", "9");
 
+        out = out.replace(" ", " ");
+        out = out.replace("؟", "?");
+        out = out.replace("،", ",");
+        out = out.replace("٪", "%");
+        out = out.replace("،", ",");
+        out = out.replace(".", ".");
+        out = out.replace("؛", ";");
+        out = out.replace("؍", "/");
+        out = out.replace("ـ", "-");
+        out = out.replace("؍", "/");
+        out = out.replace("﷼", " Rial ");
+
         return out;
     }
 
@@ -128,6 +140,9 @@ public class MyNotificationListenerService extends NotificationListenerService {
             return;
         title = mapString( csTitle.toString() );
         text = mapString( csText.toString() );
+
+        if( title == "" || text == "" )
+            return;
 
 //        Log.i(TAG,"######## :" + title + "\n" + text );
 
