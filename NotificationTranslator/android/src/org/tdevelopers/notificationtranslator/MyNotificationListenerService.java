@@ -30,6 +30,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
     private NotificationChannel channelHigh;
     private NotificationChannel groupChannel;
     private int mCurrentId = 0;
+    private int mClearId = 0;
     private Timer mTimer = null;
     private TimerTask mTimerTask = null;
 
@@ -112,6 +113,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
 //        Log.i(TAG,"**********  onCreate");
         mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         mCurrentId = 0;
+        mClearId = 0;
         mNotificationManager.cancelAll();
         super.onCreate();
    }
@@ -193,11 +195,13 @@ public class MyNotificationListenerService extends NotificationListenerService {
                 public void run() {
                     mHandler.post(new Runnable() {
                         public void run() {
-                            if( mCurrentId > 0 )
+                            if( mClearId < mCurrentId )
                             {
-                                mNotificationManager.cancel( mCurrentId-- );
+                                mNotificationManager.cancel( ++mClearId );
                             }else
                             {
+                                mCurrentId = 0;
+                                mClearId = 0;
                                 if ( mTimer != null )
                                 {
                                     mTimer.cancel();
