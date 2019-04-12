@@ -49,6 +49,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("تِ", "e");
         out = out.replace("تُ", "o");
         out = out.replace("ث", "s");
+		out = out.replace("ح", "h");
         out = out.replace("ج", "j");
         out = out.replace("چ", "ch");
         out = out.replace("ه", "h");
