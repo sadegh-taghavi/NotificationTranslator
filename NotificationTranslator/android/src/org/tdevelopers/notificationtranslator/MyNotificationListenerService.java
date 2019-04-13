@@ -95,7 +95,6 @@ public class MyNotificationListenerService extends NotificationListenerService {
 
         out = out.replace(" ", " ");
         out = out.replace("؟", "?");
-        out = out.replace("،", ",");
         out = out.replace("٪", "%");
         out = out.replace("،", ",");
         out = out.replace(".", ".");
