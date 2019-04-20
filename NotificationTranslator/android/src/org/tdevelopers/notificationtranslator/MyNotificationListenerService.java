@@ -46,7 +46,6 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("ٌ", "o");
         out = out.replace("ً", "an");
         out = out.replace("اً", "an");
-        out = out.replace("ؤ", "v");
         out = out.replace("أ", "a");
         out = out.replace("إ", "a");
         out = out.replace("ا", "a");
@@ -85,6 +84,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("م", "m");
         out = out.replace("ن", "n");
         out = out.replace("و", "v");
+        out = out.replace("ؤ", "o");
         out = out.replace("ه", "h");
         out = out.replace("ۀ", "a");
         out = out.replace("ة", "h");
