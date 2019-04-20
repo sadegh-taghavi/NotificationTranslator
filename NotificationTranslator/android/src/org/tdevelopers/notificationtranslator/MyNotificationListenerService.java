@@ -40,14 +40,23 @@ public class MyNotificationListenerService extends NotificationListenerService {
     {
         String out = input;
 
+        out = out.replace("ُ", "o");
+        out = out.replace("َ", "a");
+        out = out.replace("ٍِ", "e");
+        out = out.replace("ٌ", "o");
+        out = out.replace("ً", "an");
+        out = out.replace("اً", "an");
+        out = out.replace("ؤ", "v");
+        out = out.replace("أ", "a");
+        out = out.replace("إ", "a");
         out = out.replace("ا", "a");
         out = out.replace("آ", "a");
         out = out.replace("ب", "b");
         out = out.replace("پ", "p");
         out = out.replace("ت", "t");
-        out = out.replace("تَ", "a");
-        out = out.replace("تِ", "e");
-        out = out.replace("تُ", "o");
+        out = out.replace("تَ", "ta");
+        out = out.replace("تِ", "te");
+        out = out.replace("تُ", "to");
         out = out.replace("ث", "s");
         out = out.replace("ج", "j");
         out = out.replace("چ", "ch");
@@ -77,10 +86,13 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("ن", "n");
         out = out.replace("و", "v");
         out = out.replace("ه", "h");
+        out = out.replace("ۀ", "a");
+        out = out.replace("ة", "h");
         out = out.replace("ی", "y");
         out = out.replace("ي", "y");
         out = out.replace("ئ", "a");
         out = out.replace("ء", "a");
+        out = out.replace("﷼", " Rial ");
 
         out = out.replace("۰", "0");
         out = out.replace("۱", "1");
@@ -99,10 +111,11 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("،", ",");
         out = out.replace(".", ".");
         out = out.replace("؛", ";");
-        out = out.replace("؍", "/");
         out = out.replace("ـ", "-");
         out = out.replace("؍", "/");
-        out = out.replace("﷼", " Rial ");
+        out = out.replace("×", "*");
+        out = out.replace("«", "<<");
+        out = out.replace("»", ">>");
 
         return out;
     }
