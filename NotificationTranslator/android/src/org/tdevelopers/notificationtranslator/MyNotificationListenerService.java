@@ -15,12 +15,14 @@ import android.support.v4.content.res.ResourcesCompat;
 import java.util.Timer;
 import java.util.TimerTask;
 import android.util.Log;
+import android.os.PowerManager;
 
 public class MyNotificationListenerService extends NotificationListenerService {
 
 
     private String TAG = this.getClass().getSimpleName();
 
+    private PowerManager m_powerManager;
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder = null;
     private NotificationCompat.Builder notification = null;
@@ -123,6 +125,8 @@ public class MyNotificationListenerService extends NotificationListenerService {
     @Override
     public void onCreate() {
 //        Log.i(TAG,"**********  onCreate");
+
+        m_powerManager = (PowerManager)getSystemService(Context.POWER_SERVICE);
         mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         mCurrentId = 0;
         mClearId = 0;
@@ -139,6 +143,8 @@ public class MyNotificationListenerService extends NotificationListenerService {
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
 
+        if( m_powerManager.isInteractive() )
+            return;
         String pack = sbn.getPackageName();
 //        Log.i(TAG,"**********  onNotificationPosted " + pack );
         String ticker = "";
