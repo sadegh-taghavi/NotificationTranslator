@@ -128,6 +128,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("😄", " :D ");
         out = out.replace("😆", " :D ");
         out = out.replace("😍", " :D ");
+        out = out.replace("😅", " ':D ");
         out = out.replace("☹️", " :( ");
         out = out.replace("🙁", " :( ");
         out = out.replace("😠", " :( ");
