@@ -180,10 +180,10 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("😈", " }:) ");
         out = out.replace("👹", " }:) ");
         out = out.replace("👺", " }:) ");
-        out = out.replace("😎", " |;‑) ");
-        out = out.replace("😪", " |;‑) ");
-        out = out.replace("😏", " :‑J ");
-        out = out.replace("😒", " :‑J ");
+        out = out.replace("😎", " |;) ");
+        out = out.replace("😪", " |;) ");
+        out = out.replace("😏", " :J ");
+        out = out.replace("😒", " :J ");
         out = out.replace("😵", " %) ");
         out = out.replace("😕", " %) ");
         out = out.replace("🤕", " %) ");
@@ -191,7 +191,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("😷", " :###. ");
         out = out.replace("🤢", " :###. ");
         out = out.replace("🌹", " @};- ");
-        out = out.replace("🎅", " *<|:‑) ");
+        out = out.replace("🎅", " *<|:-) ");
         out = out.replace("💔", " </3 ");
         out = out.replace("❤️", " <3 ");
         out = out.replace("🍆", " _|_ ");
