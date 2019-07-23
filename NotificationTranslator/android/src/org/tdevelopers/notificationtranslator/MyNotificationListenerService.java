@@ -170,9 +170,10 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("😟", " :/ ");
         out = out.replace("😐", " :| ");
         out = out.replace("😑", " :| ");
-        out = out.replace("😳", " :$ ");
-        out = out.replace("😞", " :$ ");
-        out = out.replace("😖", " :$ ");
+        out = out.replace("😳", " :$| ");
+        out = out.replace("😞", " :$| ");
+        out = out.replace("😖", " :$| ");
+        out = out.replace("🤬", " :$ ");
         out = out.replace("🤐", " :X ");
         out = out.replace("😶", " :X ");
         out = out.replace("😇", " O:) ");
@@ -191,14 +192,14 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("😷", " :###. ");
         out = out.replace("🤢", " :###. ");
         out = out.replace("🌹", " @};- ");
-        out = out.replace("🎅", " *<|:-) ");
+        out = out.replace("🎅", " *<|:) ");
         out = out.replace("💔", " </3 ");
         out = out.replace("❤️", " <3 ");
         out = out.replace("🍆", " _|_ ");
         out = out.replace("🖕", " _|_ ");
         out = out.replace("🌮", " (|) ");
-        out = out.replace("🍑", " (*) ");
-        out = out.replace("🍪", " (@) ");
+        out = out.replace("🍑", " (() ");
+        out = out.replace("🍪", " (*) ");
         out = out.replace("🍩", " (O) ");
         out = out.replace("💩", " |$| ");
         out = out.replace("☠", " OX ");
@@ -208,6 +209,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         out = out.replace("👍", " OK ");
         out = out.replace("🖐", " VV/ ");
         out = out.replace("✌", " V- ");
+
 
         return out;
     }
